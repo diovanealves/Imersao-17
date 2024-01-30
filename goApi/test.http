@@ -1,0 +1,53 @@
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Category 1"
+}
+
+###
+
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/category/80b00de4-d80a-41df-9fda-325437d5d604 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+
+### Product
+
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "description": "description",
+  "price": 100,
+  "image_url": "github.com/diovanealves.png",
+  "category_id": "80b00de4-d80a-41df-9fda-325437d5d604"
+}
+
+### 
+
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+
+###
+
+GET http://localhost:8080/product/ef80d964-fa94-43f6-a033-586adf031308 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+###
+
+GET http://localhost:8080/product/category/80b00de4-d80a-41df-9fda-325437d5d604 HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
