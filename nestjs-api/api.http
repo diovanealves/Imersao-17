@@ -1,0 +1,44 @@
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Product 1",
+  "description": "ads",
+  "image_url": "github.com/diovanealves.png",
+  "price": 200
+}
+
+###
+
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiZ28iLCJpYXQiOjE3MDY3NTQwMjMsImV4cCI6MTcwNjc1NDYyM30.wvLoYdc335voPJhD85_FrUNlAVESfJSdcCXo7fuA2vg
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiZ28iLCJpYXQiOjE3MDY3NTU0NzUsImV4cCI6MTcwNjc1NjA3NX0.v-4G3c9Nim4YkjB2BkDXJYOh5MYl6bar-F1FcXC9t88
+
+{
+  "items": [
+    {
+      "product_id": "04c4353a-3f6d-4272-a8f2-44b82c05ecc0",
+      "quantity": 1
+    }
+  ],
+  "card_hash": "123"
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "go",
+  "password": "go"
+}
